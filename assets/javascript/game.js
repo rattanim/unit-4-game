@@ -8,6 +8,7 @@ $(document).ready(function() {
     var wins = 0;
     var losses = 0;
     var crystals;
+    var randomNum;
 
 // random values for crystals
 
@@ -28,7 +29,7 @@ function resetGame() {
     yourscoringnumber = 0;
     //random number for user to get to
     randomNum =  Math.floor(Math.random() * 102) + 15;
-    $("random-area").text(randomNum);
+    $("#random-area").text(randomNum) ;
     console.log("randomNum  " + randomNum);
 }
 
@@ -56,14 +57,8 @@ if (UserWin === true) {
 var winspan = $("<span>").text(wins);
 var lossesspan = $("<span>").text(losses);
 
-var postWins = $("<p>").text("wins  ");
-var postLosses = $("<p>").text("losses  ");
-
-postWins.append(winspan);
-postLosses.append(lossesspan);
-
-$("#win-area").append(postWins);
-$("#losses-area").append(postLosses);
+$("#win-area").append(winspan);
+$("#losses-area").append(lossesspan);
 }
 
 
